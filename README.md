@@ -1,8 +1,6 @@
 ## Introduction
 
-Vue Vben Admin 是一个免费开源的中后台模版。使用了最新的`vue3`,`vite5`,`TypeScript`等主流技术开发，开箱即用的中后台前端解决方案，也可用于学习参考。
-
-3DSIM
+`3DSIM WEB` is a 3D webgis prototype system built based on the self-designed **"3DSIM conceptual model"**. It is developed using mainstream technologies such as `Vue3`, `Vite5`, and `TypeScript`, and can be used for learning and reference. The core code for `3DSIM` design still needs to be optimized and is awaiting open source.
 
 ## Features
 
@@ -16,8 +14,7 @@ Vue Vben Admin 是一个免费开源的中后台模版。使用了最新的`vue3
 
 ## Preview
 
-<div style="color: red">Waiting for updates</div>
-
+🤡 *Waiting for updates*
 
 ## Use Gitpod
 

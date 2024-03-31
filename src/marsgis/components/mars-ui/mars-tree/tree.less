@@ -1,0 +1,81 @@
+.mars-main-view {
+
+  // 树控件
+  .ant-tree {
+    background: none;
+    color: var(--mars-text-color);
+    padding-bottom: 2px;
+  }
+
+  .ant-tree-checkbox {
+    margin-right: 0;
+  }
+
+  .ant-tree-show-line .ant-tree-switcher,
+  .ant-tree-checkbox-inner {
+    background: none !important;
+  }
+
+  .ant-tree-checkbox-checked {
+    background: var(--mars-primary-color);
+
+    .ant-tree-checkbox-inner {
+      border-color: var(--mars-primary-color);
+    }
+  }
+
+  .anticon-file.ant-tree-switcher-line-icon {
+    display: none;
+  }
+
+  .ant-tree-show-line .ant-tree-indent-unit::before {
+    border-right: 1px dotted var(--mars-text-color);
+  }
+
+  .ant-tree-switcher-noop {
+    width: 20px;
+  }
+
+  .ant-tree-node-selected {
+    background: none !important;
+  }
+
+  .ant-tree-switcher-noop::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 26px;
+    border-right: 1px dotted var(--mars-text-color);
+  }
+
+  .ant-tree-treenode-leaf-last {
+    .ant-tree-switcher-noop::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      height: 10px;
+      border-right: 1px dotted var(--mars-text-color);
+    }
+  }
+
+  .ant-tree-switcher-noop::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    position: absolute;
+    top: 10px;
+    border-bottom: 1px dotted var(--mars-text-color);
+  }
+
+  .ant-tree-node-content-wrapper {
+    color: var(--mars-text-color) !important;
+
+    // .ant-tree-iconEle {
+    //   line-height: 2.2;
+    // }
+
+    &:hover {
+      background: hsla(0, 0%, 100%, 0.08) !important;
+    }
+  }
+}

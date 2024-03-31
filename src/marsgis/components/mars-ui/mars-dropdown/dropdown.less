@@ -1,0 +1,30 @@
+// 下拉菜单
+.mars-dropdown-menu {
+  .ant-dropdown-menu {
+    border-bottom: 1px solid #008aff70;
+    border-left: 1px solid #008aff70;
+    border-right: 1px solid #008aff70;
+    .mars-drop-bg();
+    .mars-icon {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+  }
+
+  .ant-dropdown-menu-title-content {
+    color: var(--mars-text-color);
+  }
+
+  .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title {
+    &:hover {
+      background-color: var(--mars-select-bg) !important;
+    }
+    .ant-upload {
+      color: var(--mars-text-color);
+    }
+  }
+  .ant-dropdown-menu-submenu-title {
+    padding: 6px 20px !important;
+  }
+}

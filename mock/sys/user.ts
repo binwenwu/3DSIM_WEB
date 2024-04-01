@@ -6,12 +6,12 @@ export function createFakeUserList() {
     {
       userId: '1',
       username: 'oge',
-      realName: 'Mars3D Admin',
+      realName: 'OGE Admin',
       avatar: '',
       desc: 'manager',
-      password: 'ypfamily608',
+      password: '123456',
       token: 'fakeToken1',
-      homePath: '/charts/marsgis',
+      homePath: '/marsgis/index',
       roles: [
         {
           roleName: 'Super Admin',

@@ -18,7 +18,7 @@ import { setupStore } from '@/store';
 
 import App from './App.vue';
 
-import mars3d from '/@/marsgis/install/index';
+import mars3d from '/@/views/marsgis/install/index';
 
 async function bootstrap() {
   const app = createApp(App);

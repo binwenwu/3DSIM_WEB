@@ -4,10 +4,10 @@ import { getParentLayout, LAYOUT } from '@/router/constant';
 import { t } from '@/hooks/web/useI18n';
 
 const charts: AppRouteModule = {
-  path: '/charts',
-  name: 'Charts',
+  path: '/marsgis',
+  name: 'Marsgis',
   component: LAYOUT,
-  redirect: '/charts/marsgis',
+  redirect: '/marsgis/index',
   meta: {
     hideChildrenInMenu: true,
     orderNo: 500,
@@ -16,9 +16,9 @@ const charts: AppRouteModule = {
   },
   children: [
     {
-      path: 'marsgis',
-      name: 'Marsgis',
-      component: () => import('/@/marsgis/views/index.vue'),
+      path: 'index',
+      name: 'MarsgisPage',
+      component: () => import('/@/views/marsgis/views/index.vue'),
       meta: {
         title: t('routes.demo.charts.3dearth'),
         hideMenu: false,

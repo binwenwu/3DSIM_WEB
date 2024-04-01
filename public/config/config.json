@@ -1,7 +1,7 @@
 ﻿{
   "map3d": {
     "scene": {
-      "center": { "lat": 31.686288, "lng": 117.229619, "alt": 11333.9, "heading": 359.2, "pitch": -39.5 },
+      "center": {"lat":38.458237,"lng":106.341164,"alt":19075700.2,"heading":349.7,"pitch":-89.9},
       "scene3DOnly": false,
       "shadows": false,
       "removeDblClick": true,
@@ -78,7 +78,7 @@
         "icon": "/img/basemaps/google_img.png",
         "type": "google",
         "layer": "img_d",
-        "show": true
+        "show": false
       },
       {
         "pid": 10,
@@ -165,7 +165,8 @@
         "name": "微软影像",
         "icon": "img/basemaps/bingAerial.png",
         "type": "bing",
-        "layer": "Aerial"
+        "layer": "Aerial",
+        "show": true
       },
       {
         "id": 2017,

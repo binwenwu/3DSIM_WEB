@@ -3,6 +3,7 @@ import path, { resolve } from 'path';
 import { mars3dPlugin } from 'vite-plugin-mars3d';
 
 export default defineApplicationConfig({
+
   overrides: {
     optimizeDeps: {
       include: [
@@ -20,7 +21,7 @@ export default defineApplicationConfig({
       alias: [
         {
           find: /@mars\//,
-          replacement: pathResolve('src/marsgis') + '/',
+          replacement: pathResolve('src/views/marsgis') + '/',
         },
       ],
     },
@@ -32,7 +33,7 @@ export default defineApplicationConfig({
     server: {
       proxy: {
         '/basic-api': {
-          target: 'http://localhost:3000',
+          target: 'http://localhost:3000/',
           changeOrigin: true,
           ws: true,
           rewrite: (path) => path.replace(new RegExp(`^/basic-api`), ''),
@@ -55,7 +56,7 @@ export default defineApplicationConfig({
       preprocessorOptions: {
         less: {
           javascriptEnabled: true,
-          additionalData: `@import "${path.resolve(__dirname, "src/marsgis/components/mars-ui/base.less")}";`
+          additionalData: `@import "${path.resolve(__dirname, "src/views/marsgis/components/mars-ui/base.less")}";`
         }
       }
     },
@@ -67,3 +68,5 @@ export default defineApplicationConfig({
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
 }
+
+

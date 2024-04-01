@@ -75,7 +75,7 @@ Dynamically using environment variables to achieve container differentiation dep
 docker run --name 3dsim-web -d -p 6666:80  -e VG_BASE_URL=http://localhost:3333 vue-vben-admin
 ```
 
-The you can navigate to http://localhost:6666
+Then you can navigate to http://localhost:6666
 
 ## How to contribute
 

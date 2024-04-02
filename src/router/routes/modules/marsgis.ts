@@ -10,9 +10,9 @@ const charts: AppRouteModule = {
   redirect: '/marsgis/index',
   meta: {
     hideChildrenInMenu: true,
-    orderNo: 500,
-    icon: 'ion:bar-chart-outline',
-    title: t('routes.demo.charts.3dearth'),
+    orderNo: 1,
+    icon: 'ant-design:global-outlined',
+    title: t('routes.demo.marsgis.3dearth'),
   },
   children: [
     {
@@ -20,7 +20,7 @@ const charts: AppRouteModule = {
       name: 'MarsgisPage',
       component: () => import('/@/views/marsgis/views/index.vue'),
       meta: {
-        title: t('routes.demo.charts.3dearth'),
+        title: t('routes.demo.marsgis.3dearth'),
         hideMenu: false,
       },
     },

@@ -33,18 +33,18 @@ export default defineApplicationConfig({
     server: {
       proxy: {
         '/basic-api': {
-          target: 'http://localhost:3000/',
+          target: 'http://127.0.0.1:8000/',
           changeOrigin: true,
           ws: true,
           rewrite: (path) => path.replace(new RegExp(`^/basic-api`), ''),
           // only https
           // secure: false
         },
-        '/upload': {
-          target: 'http://localhost:3300/upload',
+        '/common/upload': {
+          target: 'http://127.0.0.1:8000/',
           changeOrigin: true,
           ws: true,
-          rewrite: (path) => path.replace(new RegExp(`^/upload`), ''),
+          rewrite: (path) => path.replace(new RegExp(`^/common/upload`), ''),
         },
       },
       open: false, // 启动时自动打开浏览器

@@ -1,4 +1,10 @@
 {
+  "marsgis":{
+    "3dearth": "三维地球"
+  },
+  "import":{
+    "import": "数据入库"
+  },
   "charts": {
     "baiduMap": "百度地图",
     "aMap": "高德地图",

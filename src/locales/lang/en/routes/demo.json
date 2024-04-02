@@ -1,4 +1,10 @@
 {
+  "marsgis":{
+    "3dearth": "3D Earth"
+  },
+  "import":{
+    "import": "Data entry"
+  },
   "charts": {
     "baiduMap": "Baidu map",
     "aMap": "A map",

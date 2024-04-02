@@ -1,27 +1,31 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@vben/ts-config/vue-app.json",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "strictNullChecks": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
     "baseUrl": ".",
-    "declaration": false,
-    "types": ["vite/client"],
+    "outDir": "dist",
+    "types": ["vite/client", "node"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "paths": {
-      "@/*": ["src/*"],
-      "#/*": ["types/*"]
+      "@mars/*": ["src/*"]
     }
   },
-  "include": [
-    "tests/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "types/**/*.d.ts",
-    "types/**/*.ts",
-    "build/**/*.ts",
-    "build/**/*.d.ts",
-    "mock/**/*.ts",
-    "vite.config.ts"
-  ],
-  "exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js"]
+  "include": ["src/**/*.ts", "packages/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "src/**/*.js", "dist"]
 }

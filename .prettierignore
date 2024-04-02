@@ -1,12 +1,12 @@
-dist
+/dist/*
+!.github/**/
+!.vscode/**/
 .local
 .output.js
-node_modules
+/node_modules/**
 
 **/*.svg
 **/*.sh
 
-public
-.npmrc
-
-*-lock.yaml
+src/**/*.scss
+src/**/*.css

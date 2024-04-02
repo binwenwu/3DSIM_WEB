@@ -7,10 +7,9 @@ node_modules
 .vscode
 .idea
 dist
-/public
+/public/lib/
 /docs
 .husky
 .local
 /bin
 Dockerfile
-package.json

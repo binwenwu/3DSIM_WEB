@@ -1,0 +1,147 @@
+/*
+统一样式*/
+
+.slide-panel{
+  width:320px;
+  height:100px;
+  background-color: rgba(15, 52, 83, 0.55);
+}
+
+.infowindow-device-content {
+  color: #fff;
+  background-color: rgb(44, 62, 80, 0.9);
+  border: 2px solid #5FD6FF;
+  border-radius: 5px;
+
+  .device_title_box {
+    height: 32px;
+    line-height: 32px;
+    background: linear-gradient(90deg, rgba(0, 204, 255, 1), rgba(79, 226, 181, 1));
+    padding: 0 12px;
+
+    >span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .device_content_box {
+    padding: 5px 10px;
+    line-height: 26px;
+
+    .warin {
+      display: inline-block;
+      width: 28px;
+      height: 17px;
+      line-height: 17px;
+      text-align: center;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .warin1 {
+      background: #f1828d;
+    }
+
+    .warin2 {
+      background: #f5e653;
+    }
+
+    .warin3 {
+      background: #f9b42d;
+    }
+
+    .warin4 {
+      background: #4183d7;
+    }
+  }
+
+  .device_footer_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    >div {
+      border: 1px #03EFFF solid;
+      color: #03EFFF;
+      border-radius: 6px;
+      text-align: center;
+      padding: 3px 12px;
+      cursor: pointer;
+    }
+  }
+
+  .infowindow-arrow-line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    right: 45%;
+    bottom: -15px;
+    background-color: #03EFFF;
+    transform: rotateZ(90deg)
+  }
+}
+
+
+/* 弹性盒子样式 */
+.flex-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inline-flex-box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+/* 方向-竖轴 */
+.flex-direction {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/*  两端对齐*/
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* 环绕两端对齐 */
+.flex-around {
+  -webkit-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* 竖轴对齐方式 */
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.align-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.align-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}

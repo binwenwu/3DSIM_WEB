@@ -18,6 +18,9 @@
   "type": "module",
   "dependencies": {
     "@icon-park/svg": "^1.4.2",
+    "@icon-park/vue-next": "^1.4.2",
+    "@mars3d/heatmap.js": "^2.0.7",
+    "@opentiny/vue": "^3.9.1",
     "@turf/turf": "^6.5.0",
     "ant-design-vue": "^4.1.2",
     "axios": "^1.6.7",
@@ -25,7 +28,9 @@
     "dayjs": "^1.11.10",
     "echarts": "^5.5.0",
     "echarts-gl": "^2.0.9",
+    "element-plus": "^2.3.8",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
     "kml-geojson": "^1.2.2",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
@@ -36,7 +41,9 @@
     "mars3d-heatmap": "~3.7.0",
     "mars3d-mapv": "~3.7.0",
     "mars3d-space": "~3.7.0",
+    "mitt": "^3.0.1",
     "nprogress": "^0.2.0",
+    "timeline-slider-vue": "^1.0.9",
     "uuid": "^9.0.1",
     "vue": "^3.4.19",
     "vue-color-kit": "^1.0.6",
@@ -93,7 +100,7 @@
     "gis",
     "webgis"
   ],
-  "author": "火星科技",
+  "author": "武汉大学",
   "license": "Apache-2.0",
   "homepage": "http://mars3d.cn",
   "lint-staged": {

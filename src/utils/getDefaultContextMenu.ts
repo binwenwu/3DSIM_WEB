@@ -78,7 +78,7 @@ export function getDefaultContextMenu(map) {
 
          横坐标:${ptNew[0].toFixed(1)}, 纵坐标:${ptNew[1].toFixed(1)} (CGCS2000)
         `
-        globalAlert(inhtml, "位置信息")
+        window.globalAlert(inhtml, "位置信息")
       }
     },
     {
@@ -88,7 +88,7 @@ export function getDefaultContextMenu(map) {
       icon: PreviewOpen({ theme: "outline", fill: "#fff", size: "18" }),
       callback: function (e) {
         const mpt = JSON.stringify(map.getCameraView())
-        globalAlert(mpt, map.getLangText("_当前视角信息"))
+        window.globalAlert(mpt, map.getLangText("_当前视角信息"))
       }
     },
     {

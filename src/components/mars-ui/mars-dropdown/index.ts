@@ -5,7 +5,7 @@ import "./dropdown.less"
 /**
  * 下拉菜单
  *
- * @copyright 火星科技 mars3d.cn
+ * @copyright 武汉大学 mars3d.cn
  * @author 木遥 2022-01-01
  */
 

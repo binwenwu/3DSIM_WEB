@@ -1,7 +1,7 @@
 /**
  * store 状态管理
- * @copyright 火星科技 mars3d.cn
- * @author 火星渣渣灰 2022-02-19
+ * @copyright 武汉大学 mars3d.cn
+ * @author tankenqi 2022-02-19
  */
 import { Store, StoreOptions, createStore, useStore } from "vuex"
 import { InjectionKey, computed, nextTick, onUnmounted, inject } from "vue"

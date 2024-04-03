@@ -4,14 +4,14 @@
 <script setup lang="ts">
 /**
  * 地图渲染组件
- * @copyright 火星科技 mars3d.cn
- * @author 火星渣渣灰 2022-02-19
+ * @copyright 武汉大学 mars3d.cn
+ * @author tankenqi 2022-02-19
  */
 import { computed, onUnmounted, onMounted, h, ref, toRaw } from "vue"
 import * as mars3d from "mars3d"
 import { getQueryString } from "@mars/utils/mars-util"
 import { getDefaultContextMenu } from "@mars/utils/getDefaultContextMenu"
-import { $alert, $message } from "@mars/components/mars-ui/index"
+import { $alert, $message, $notify, $showLoading, $hideLoading } from "@mars/components/mars-ui/index"
 
 const props = withDefaults(
   defineProps<{
@@ -107,7 +107,12 @@ function onMapLoad() {
   window.globalAlert = $alert
   // @ts-ignore
   window.globalMsg = $message
-
+  // @ts-ignore
+  window.globalNoify = $notify
+  // @ts-ignore
+  window.hideLoading = $hideLoading
+  // @ts-ignore
+  window.showLoading = $showLoading
   // 用于 config.json 中 西藏垭口 图层的详情按钮 演示
   // @ts-ignore
   window.showPopupDetails = (item: any) => {

@@ -6,15 +6,15 @@
 
 - **State-of-art Techinical Stack**：Using the latest and popular front-end technology such as Vue3/vite2
 - **TypeScript**: Application-level JavaScript language
-- **Theming**: Configurable themes
-- **International**：Built-in i18n support
-- **Response Mock**: Built-in response mock ability
-- **Authority**: Built-in permission system based on dynamic routes.
 - **Component**: Extracted and encapsulated components for various scenarios.
+- **3D Visualization**: Utilizing advanced techniques for 3D visualization, enabling immersive and interactive experiences within the web GIS system.
+- **Geospatial Data Handling**: Efficiently managing geospatial data, including complex geometries, raster data, and attribute information, to provide accurate and comprehensive representations of geographic features.
+- **Interactivity**: Implementing interactive features such as zooming, panning, rotation, and selection, allowing users to explore and interact with 3D maps and spatial data effectively.
+- **Performance Optimization**: Employing optimization techniques to ensure smooth performance and fast rendering, even with large-scale and complex 3D scenes and datasets.
 
 ## Preview
 
-🤡 *Waiting for updates*
+![image-20240405154029887](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/20240405154023.png)
 
 ## Use Gitpod
 
@@ -31,7 +31,6 @@ Open the project in Gitpod (free online dev environment for GitHub) and start co
 - [Es6+](http://es6.ruanyifeng.com/) - Familiar with es6 basic syntax
 - [Vue-Router-Next](https://next.router.vuejs.org/) - Familiar with the basic use of vue-router
 - [Ant-Design-Vue](https://antdv.com/docs/vue/introduce-cn/) - ui basic use
-- [Mock.js](https://github.com/nuysoft/Mock) - mockjs basic syntax
 
 ## Install and use
 
@@ -46,36 +45,20 @@ git clone https://github.com/binwenwu/3DSIM_WEB.git
 ```bash
 cd 3DSIM_WEB
 
-pnpm install
+npm install
 ```
 
 - Local operation
 
 ```bash
-pnpm serve
+npm run dev
 ```
 
 - Build
 
 ```bash
-pnpm build
+npm run build
 ```
-
-## Building Docker Images
-
-- build image
-
-```bash
-docker build -t 3dsim-web .
-```
-
-Dynamically using environment variables to achieve container differentiation deployment, pointing to different backend service addresses through different **VG_BASE_URL** environment variables. The following example uses http://localhost:3333 As the backend service address and map the container to port **6666**
-
-```bash
-docker run --name 3dsim-web -d -p 6666:80  -e VG_BASE_URL=http://localhost:3333 vue-vben-admin
-```
-
-Then you can navigate to http://localhost:6666
 
 ## How to contribute
 

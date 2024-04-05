@@ -93,17 +93,17 @@ const upload = async () => {
   if (formData.get("file") === null) {
     window.globalMsg("Please select a file")
   } else {
-    window.globalMsg("Starting Import")
     window.showLoading()
-    // 获取纬度信息
+    window.globalMsg("Starting Import")
+    // 获取维度信息
     const dimension = parse2json(marsGuiRef.value.getValues())
-    // 将纬度信息添加到formData中
+    // 将维度信息添加到formData中
     formData.append("dimension", dimension)
     try {
       // 向upload页面上传
       const response = await axios.post("http://127.0.0.1:8000/common/upload/", formData)
-      window.globalMsg("Finished Import")
       window.hideLoading()
+      window.globalMsg("Finished Import")
     } catch (error) {
       window.globalMsg("Import Failed")
       console.error("Error uploading file:", error)

@@ -14,7 +14,7 @@
 
 ## Preview
 
-![image-20240405154029887](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/20240405154023.png)
+![image-20240405154029887](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/image-20240405154029887-min.png)
 
 ## Use Gitpod
 

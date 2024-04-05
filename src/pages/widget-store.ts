@@ -26,21 +26,21 @@ const store: StoreOptions<WidgetState> = {
       //   group: "manage"
       // },
       { // 图层管理
-        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/manage-layers/index.vue"))),
-        name: "manage-layers",
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/basic-layers/index.vue"))),
+        name: "basic-layers",
         group: "manage",
         disableOther: ["roamLine"]
       },
       {
-        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/manage-layers/layer-tree.vue"))),
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/basic-layers/layer-tree.vue"))),
         name: "layer-tree"
       },
       {
-        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/manage-layers/layer-picture-heatmap.vue"))),
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/basic-layers/layer-picture-heatmap.vue"))),
         name: "layer-picture-heatmap"
       },
       {
-        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/manage-layers/layer-picture-guihua.vue"))),
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/basic-layers/layer-picture-guihua.vue"))),
         name: "layer-picture-guihua"
       },
       { // 坐标定位
@@ -107,9 +107,13 @@ const store: StoreOptions<WidgetState> = {
       { // 图层编辑
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/graphic-editor/index.vue"))),
         name: "graphic-editor"
+      },
+      { // 3DSIM 数据入库
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/upload/index.vue"))),
+        name: "upload"
       }
     ],
-    openAtStart: ["query-poi", "toolbar"]
+    openAtStart: ["query-poi", "toolbar", "upload"]
   }
 }
 

@@ -3,7 +3,7 @@
     <div class="query-poi" @mousedown="clickVoid">
       <div class="query-poi__search">
         <mars-input
-          placeholder="Search location"
+          placeholder="地点搜索"
           v-model:value="searchTxt"
           class="input"
           data-event="prevent"

@@ -17,6 +17,7 @@ import MarsUI from "@mars/components/mars-ui"
 import { router } from "./routes"
 import "@mars/components/mars-ui/common"
 
+
 const app = createApp(Application)
 app.use(MarsUI)
 app.use(router)

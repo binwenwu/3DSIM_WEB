@@ -36,9 +36,16 @@ const { activate } = useWidget()
 
 const data = [
   // { name: "底图", icon: "international", widget: "manage-basemap" },
-  { name: "Layers", icon: "layers", widget: "manage-layers" },
   {
-    name: "工具",
+    name: "3DSIM工具",
+    icon: "toolkit",
+    children: [
+      { name: "Data Import", icon: "upload-one", widget: "upload" }
+    ]
+  },
+  { name: "3DSIM图层", icon: "layers", widget: "basic-layers" },
+  {
+    name: "基础工具",
     icon: "tool",
     children: [
       { name: "图上量算", icon: "ruler", widget: "measure" },
@@ -55,7 +62,8 @@ const data = [
       // { name: "分屏对比", icon: "full-screen-play", widget: "map-compare" }
       // { name: "百度街景", icon: h(City, { theme: "outline", size: "18" }), widget: "street-view" }
     ]
-  }
+  },
+  { name: "基础图层", icon: "layers", widget: "basic-layers" }
 ]
 
 const showWidget = (widget: string) => {

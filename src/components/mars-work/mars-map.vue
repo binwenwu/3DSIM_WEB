@@ -46,8 +46,6 @@ onMounted(() => {
 // onload事件将在地图渲染后触发
 const emit = defineEmits(["onload"])
 const initMars3d = (option: any) => {
-
-
   option = mars3d.Util.merge(option, toRaw(props.options)) // 合并配置
   map = new mars3d.Map(withKeyId.value, option)
 
@@ -62,7 +60,46 @@ const initMars3d = (option: any) => {
   }
 
   // 开场动画
-  // map.openFlyAnimation();
+  map.openFlyAnimation()
+
+  // 宇宙天空盒
+  map.scene.skyBox = new mars3d.Cesium.SkyBox({
+    sources: {
+      negativeX: "./img/tietu/tycho2t3_80_mx.jpg",
+      negativeY: "./img/tietu/tycho2t3_80_my.jpg",
+      negativeZ: "./img/tietu/tycho2t3_80_mz.jpg",
+      positiveX: "./img/tietu/tycho2t3_80_px.jpg",
+      positiveY: "./img/tietu/tycho2t3_80_py.jpg",
+      positiveZ: "./img/tietu/tycho2t3_80_pz.jpg"
+    }
+  })
+
+  // 近地天空盒 晴天
+  const qingtianSkybox = new mars3d.GroundSkyBox({
+    sources: {
+      positiveX: "./img/tietu/rightav9.jpg",
+      negativeX: "./img/tietu/leftav9.jpg",
+      positiveY: "./img/tietu/frontav9.jpg",
+      negativeY: "./img/tietu/backav9.jpg",
+      positiveZ: "./img/tietu/topav9.jpg",
+      negativeZ: "./img/tietu/bottomav9.jpg"
+    }
+  })
+
+  const defaultSkybox = map.scene.skyBox
+  map.on(mars3d.EventType.postRender, () => {
+    const position = map.camera.position
+    const height = mars3d.Cesium.Cartographic.fromCartesian(position).height
+    if (height < 230000) {
+      map.scene.skyBox = qingtianSkybox
+      map.scene.skyAtmosphere.show = false
+    } else {
+      if (defaultSkybox) {
+        map.scene.skyBox = defaultSkybox
+      }
+      map.scene.skyAtmosphere.show = true
+    }
+  })
 
   // 针对不同终端的优化配置
   if (mars3d.Util.isPCBroswer()) {
@@ -304,7 +341,6 @@ onUnmounted(() => {
   border: 1px solid #209ffd;
   background: #209ffd1c;
   color: var(--mars-text-color);
-
 }
 
 .mars3d-tooltip {

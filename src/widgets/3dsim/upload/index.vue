@@ -3,14 +3,14 @@
     <template #icon>
       <mars-icon icon="local" width="18" />
     </template>
-    <div class="position-container">
+    <div class="form-container">
       <a-form>
         <mars-gui ref="marsGuiRef" :options="options" labelCol="5"></mars-gui>
       </a-form>
       <div style="margin-left: 10px; margin-top: 10px">FileSelect: <mars-input type="file" @change="onFileChange" accept=".zip,.7z" /></div>
       <div class="f-pt f-tac">
         <a-space>
-          <mars-button @click="upload" style="width: 390px">Starting Import</mars-button>
+          <mars-button @click="upload" style="width: 390px">Import - <mars-icon icon="folder-upload"/></mars-button>
         </a-space>
       </div>
     </div>
@@ -26,14 +26,14 @@ import { log } from "console"
 import { options } from "./map"
 import { stringifyQuery } from "vue-router"
 
-interface ThreeDSIMForm {
+interface ImportForm {
   feature: string
   product: string
   lat: Array<number>
   lon: Array<number>
   validFrom: Array<number>
   validTo: Array<number>
-  viewPoint: number
+  viewedRange: Array<number>
   cityGMLFileType: string
   _3DTilesFileType: string
   osgFileType: string
@@ -51,7 +51,7 @@ interface Dimension {
   lon: Array<number>
   validFrom: Array<number>
   validTo: Array<number>
-  viewPoint: number
+  viewedRange: Array<number>
   mimeType: string
 }
 
@@ -112,7 +112,7 @@ const upload = async () => {
 }
 
 // 将数据转换为json格式
-const parse2json = (form: ThreeDSIMForm) => {
+const parse2json = (form: ImportForm) => {
   const dimension: Dimension = {
     feature: form.feature,
     product: form.product,
@@ -120,7 +120,7 @@ const parse2json = (form: ThreeDSIMForm) => {
     lon: [...form.lon],
     validFrom: [...form.validFrom],
     validTo: [...form.validTo],
-    viewPoint: form.viewPoint,
+    viewedRange: [...form.viewedRange],
     mimeType: ""
   }
   switch (form.product) {
@@ -155,7 +155,7 @@ const parse2json = (form: ThreeDSIMForm) => {
 }
 </script>
 <style lang="less" scoped>
-.position-container {
+.form-container {
   padding-top: 10px;
   margin-right: 5px;
 }

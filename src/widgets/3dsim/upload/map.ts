@@ -105,14 +105,14 @@ export const options: GuiItem[] = [
     type: "inputGroup",
     field: "lon",
     label: "Longitude",
-    value: [0, 0],
+    value: [-180, 180],
     units: ["°", "°"]
   },
   {
     type: "inputGroup",
     field: "lat",
     label: "Latitude",
-    value: [0, 0],
+    value: [-90, 90],
     units: ["°", "°"]
   },
   {
@@ -130,80 +130,11 @@ export const options: GuiItem[] = [
     units: ["年", "月", "日"]
   },
   {
-    type: "select",
-    field: "viewPoint",
-    label: "ViewPoint",
-    value: 1,
-    data: [
-      {
-        value: 1,
-        label: "1"
-      },
-      {
-        value: 2,
-        label: "2"
-      },
-      {
-        value: 3,
-        label: "3"
-      },
-      {
-        value: 4,
-        label: "4"
-      },
-      {
-        value: 5,
-        label: "5"
-      },
-      {
-        value: 6,
-        label: "6"
-      },
-      {
-        value: 7,
-        label: "7"
-      },
-      {
-        value: 8,
-        label: "8"
-      },
-      {
-        value: 9,
-        label: "9"
-      },
-      {
-        value: 10,
-        label: "10"
-      },
-      {
-        value: 11,
-        label: "11"
-      },
-      {
-        value: 12,
-        label: "12"
-      },
-      {
-        value: 13,
-        label: "13"
-      },
-      {
-        value: 14,
-        label: "14"
-      },
-      {
-        value: 15,
-        label: "15"
-      },
-      {
-        value: 16,
-        label: "16"
-      },
-      {
-        value: 17,
-        label: "17"
-      }
-    ]
+    type: "inputGroup",
+    field: "viewedRange",
+    label: "VRange",
+    value: [0, 9999999],
+    units: ["m", "m"]
   },
   {
     type: "select",

@@ -111,9 +111,17 @@ const store: StoreOptions<WidgetState> = {
       { // 3DSIM 数据入库
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/upload/index.vue"))),
         name: "upload"
+      },
+      { // 3DSIM 数据查询
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/query/index.vue"))),
+        name: "query"
+      },
+      { // 3DSIM 查询结果
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/query-result/index.vue"))),
+        name: "query-result"
       }
     ],
-    openAtStart: ["query-poi", "toolbar", "upload"]
+    openAtStart: ["query-poi", "toolbar", "query"]
   }
 }
 

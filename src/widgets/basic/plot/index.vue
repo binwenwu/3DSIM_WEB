@@ -318,6 +318,9 @@ const showEditor = (e: any) => {
   }
 
   if (!isActivate("graphic-editor")) {
+    console.log({
+        graphic: markRaw(graphic)
+      })
     activate({
       name: "graphic-editor",
       data: {

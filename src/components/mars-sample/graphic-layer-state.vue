@@ -846,6 +846,7 @@ const emit = defineEmits(["onStartEditor", "onStopEditor"])
 
 // 表格行: 开始编辑graphic
 function startEditGraphic(record: GraphicTableItem) {
+  console.log(record)
   const graphicLayer = getManagerLayer()
   const graphic = graphicLayer.getGraphicById(record.key)
   showEditor(graphic) // 修改style

@@ -1,5 +1,5 @@
 <template>
-  <mars-dialog title="Data Query" width="430" top="85" left="10" :min-width="357">
+  <mars-dialog icon="find" title="Data Query" width="430" top="85" left="10" :min-width="357">
     <template #icon>
       <mars-icon icon="local" width="18" />
     </template>

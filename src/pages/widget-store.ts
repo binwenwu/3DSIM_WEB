@@ -119,6 +119,14 @@ const store: StoreOptions<WidgetState> = {
       { // 3DSIM 查询结果
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/query-result/index.vue"))),
         name: "query-result"
+      },
+      { // 3DScene 详细信息
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/scene-detail-panel/index.vue"))),
+        name: "scene-detail-panel"
+      },
+      { // 3DModel 详细信息
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/model-detail-panel/index.vue"))),
+        name: "model-detail-panel"
       }
     ],
     openAtStart: ["query-poi", "toolbar", "query"]

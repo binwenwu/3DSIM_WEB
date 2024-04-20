@@ -9,7 +9,7 @@
       </a-form>
       <div class="f-pt f-tac">
         <a-space>
-          <mars-button @click="query" style="width: 390px">Query - <mars-icon icon="search" /></mars-button>
+          <mars-button @click="queryAssets" style="width: 390px">Query - <mars-icon icon="search" /></mars-button>
         </a-space>
       </div>
     </div>
@@ -43,7 +43,7 @@ interface QueryParams {
 const marsGuiRef = ref()
 const assets = ref()
 
-const query = async () => {
+const queryAssets = async () => {
   window.showLoading()
   window.globalMsg("Starting Query")
   const queryParams = parse2json(marsGuiRef.value.getValues())

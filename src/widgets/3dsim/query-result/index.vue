@@ -1,5 +1,5 @@
 <template>
-  <mars-dialog icon="table" title="Query Result" width="500" top="85" right="10" :min-width="357">
+  <mars-dialog icon="table" title="Query Result" width="600" top="85" right="10" :min-width="357">
     <mars-table
       size="small"
       bordered
@@ -12,6 +12,9 @@
       <template #bodyCell="{ column, record, text }">
         <template v-if="column.dataIndex === 'info'">
           <mars-icon title="查看详细信息" icon="view-list" @click="viewDetailInfo(record)" />
+        </template>
+        <template v-else-if="column.dataIndex === 'delete'">
+          <mars-icon title="删除该资产" icon="delete-mode" @click="deleteAsset(record)" />
         </template>
         <template v-else>
           <span>{{ text }}</span>
@@ -103,12 +106,21 @@ const columns: TableColumnType[] = [
     dataIndex: "assetType",
     key: "assetType",
     ellipsis: true,
-    align: "center"
+    align: "center",
+    defaultSortOrder: "descend",
+    sorter: (a, b) => sortByAlphabeticalOrder(a, b, "assetType")
   },
   {
-    title: "More Info",
+    title: "MoreInfo",
     dataIndex: "info",
     key: "info",
+    ellipsis: true,
+    align: "center"
+  },
+  { // 删除表格中当前行的三维资产
+    title: "Delete",
+    dataIndex: "delete",
+    key: "delete",
     ellipsis: true,
     align: "center"
   }
@@ -125,7 +137,7 @@ const rowSelection: TableProps["rowSelection"] = {
   }
 }
 
-const viewDetailInfo = (record:modelDetailInfo) => {
+const viewDetailInfo = (record: modelDetailInfo | sceneDetailInfo) => {
   if (record.assetType === "3DModel") {
     if (!isActivate("model-detail-panel")) {
       activate({
@@ -157,6 +169,20 @@ const viewDetailInfo = (record:modelDetailInfo) => {
       })
     }
   }
+}
+
+const deleteAsset = (record: modelDetailInfo | sceneDetailInfo) => {
+  // 1. 确认是否删除
+  if (!confirm("是否确认删除该资产？")) {
+    return
+  }
+  // 2. 删除表格中的该行
+  const index = assetsList.value.findIndex((item) => item === record)
+  if (index > -1) {
+    assetsList.value.splice(index, 1)
+  }
+  // 3. 发送请求到后端删除该资产
+  
 }
 
 const sortByAlphabeticalOrder = (a, b, field: string) => {

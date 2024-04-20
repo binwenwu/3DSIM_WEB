@@ -1,7 +1,7 @@
 ﻿{
   "map3d": {
     "scene": {
-      "center": {"lat":38.458237,"lng":106.341164,"alt":19075700.2,"heading":349.7,"pitch":-89.9},
+      "center": {"lat":38.016026,"lng":109.128729,"alt":16848333.6,"heading":2.1,"pitch":-89.9},
       "scene3DOnly": false,
       "shadows": false,
       "removeDblClick": true,
@@ -89,7 +89,7 @@
           { "name": "底图", "type": "tdt", "layer": "img_d" },
           { "name": "注记", "type": "tdt", "layer": "img_z" }
         ],
-        "show": false
+        "show": true
       },
       {
         "pid": 10,
@@ -166,7 +166,7 @@
         "icon": "img/basemaps/bingAerial.png",
         "type": "bing",
         "layer": "Aerial",
-        "show": true
+        "show": false
       },
       {
         "id": 2017,

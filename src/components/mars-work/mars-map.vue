@@ -49,9 +49,17 @@ const initMars3d = (option: any) => {
   option = mars3d.Util.merge(option, toRaw(props.options)) // 合并配置
   map = new mars3d.Map(withKeyId.value, option)
 
+  // 添加时钟仪表盘
+  const animation = new mars3d.control.Animation({
+    ticks: [0.1, 0.25, 0.5, 1.0, 2.0, 5.0, 10.0, 15.0, 30.0, 60.0, 120.0, 300.0, 600.0, 900.0, 1800.0, 3600.0] // 调整范围
+  })
+  map.addControl(animation)
+  // 添加时间轴
+  const timeline = new mars3d.control.Timeline()
+  map.addControl(timeline)
+
   // 绑定当前项目的默认右键菜单
   map.bindContextMenu(getDefaultContextMenu(map))
-
   // 如果有xyz传参，进行定位
   const lat = getQueryString("lat")
   const lng = getQueryString("lng")
@@ -191,7 +199,7 @@ onUnmounted(() => {
 /**cesium 工具按钮栏*/
 .cesium-viewer-toolbar {
   top: auto !important;
-  bottom: 35px !important;
+  bottom: 15% !important;
   left: 12px !important;
   right: auto !important;
 }

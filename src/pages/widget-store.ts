@@ -127,9 +127,13 @@ const store: StoreOptions<WidgetState> = {
       { // 3DModel 详细信息
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/model-detail-panel/index.vue"))),
         name: "model-detail-panel"
+      },
+      { // 数据格式转化
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/format-convert/index.vue"))),
+        name: "format-convert"
       }
     ],
-    openAtStart: ["query-poi", "toolbar", "query"]
+    openAtStart: ["query-poi", "toolbar", "basic-layers"]
   }
 }
 

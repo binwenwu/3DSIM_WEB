@@ -1,7 +1,7 @@
 ﻿{
   "map3d": {
     "scene": {
-      "center": {"lat":38.016026,"lng":109.128729,"alt":16848333.6,"heading":2.1,"pitch":-89.9},
+      "center": { "lat": 38.016026, "lng": 109.128729, "alt": 16848333.6, "heading": 2.1, "pitch": -89.9 },
       "scene3DOnly": false,
       "shadows": false,
       "removeDblClick": true,
@@ -52,7 +52,7 @@
       "contextmenu": { "hasDefault": true },
       "mouseDownView": true,
       "zoom": { "enabled": false, "insertIndex": 1 },
-      "compass": { "enabled":false,"bottom": "toolbar", "left": "5px" },
+      "compass": { "enabled": false, "bottom": "toolbar", "left": "5px" },
       "distanceLegend": { "left": "100px", "bottom": "2px" },
       "locationBar": {
         "crs": "CGCS2000_GK_Zone_3",
@@ -89,7 +89,7 @@
           { "name": "底图", "type": "tdt", "layer": "img_d" },
           { "name": "注记", "type": "tdt", "layer": "img_z" }
         ],
-        "show": true
+        "show": false
       },
       {
         "pid": 10,
@@ -164,9 +164,12 @@
         "pid": 10,
         "name": "微软影像",
         "icon": "img/basemaps/bingAerial.png",
-        "type": "bing",
-        "layer": "Aerial",
-        "show": false
+        "type": "group",
+        "layers": [
+          { "name": "底图", "type": "bing", "layer": "Aerial" },
+          { "name": "注记", "type": "tdt", "layer": "img_z" }
+        ],
+        "show": true
       },
       {
         "id": 2017,
@@ -278,7 +281,6 @@
         "layer": "time",
         "mapSplit": false
       },
-
       { "id": 60, "name": "地形", "type": "group" },
       { "pid": 60, "type": "terrain", "name": "Cesium地形", "terrainType": "ion", "radio": true },
       { "pid": 60, "type": "terrain", "name": "Mars3D地形", "terrainType": "xyz", "url": "{dataServer}/terrain", "radio": true },
@@ -291,7 +293,345 @@
         "radio": true
       },
       { "pid": 60, "type": "terrain", "name": "无地形", "terrainType": "none", "radio": true },
-      { "id": 99, "name": "数据图层", "type": "group" }
+      { "id": 70, "name": "三维资产", "type": "group" },
+      { "id": 700, "pid": 70, "name": "3DTiles", "type": "group" },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学全貌",
+        "url": "./data/3dtiles/武汉大学全貌/tileset.json",
+        "center": { "lat": 30.51919, "lng": 114.353049, "alt": 1127.6, "heading": 11.5, "pitch": -36.1 },
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": [{ "name": "名称", "field": "layer_name", "unit": "" }],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学信息学部",
+        "url": "./data/3dtiles/武汉大学信息学部/tileset.json",
+        "center": { "lat": 30.525358, "lng": 114.353872, "alt": 474.3, "heading": 62.1, "pitch": -47.2 },
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": [{ "name": "名称", "field": "layer_name", "unit": "" }],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学文理学部",
+        "url": "./data/3dtiles/武汉大学文理学部/tileset.json",
+        "center": { "lat": 30.534161, "lng": 114.353585, "alt": 776.7, "heading": 26.1, "pitch": -40.3 },
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": [{ "name": "名称", "field": "layer_name", "unit": "" }],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学建筑模型",
+        "url": "./data/3dtiles/武汉大学建筑模型/tileset.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "上海市建筑模型",
+        "url": "https://data.mars3d.cn/3dtiles/jzw-shanghai/tileset.json",
+        "center": { "lat": 31.243628, "lng": 121.478968, "alt": 998.3, "heading": 104.7, "pitch": -28.6 },
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "NAME", "unit": "" },
+          { "name": "楼层", "field": "floor", "unit": "层" }
+        ],
+        "style": {
+          "color": {
+            "conditions": [
+              ["${floor} >= 25", "rgba(45, 0, 75, 0.5)"],
+              ["${floor} >= 20", "rgb(102, 71, 151)"],
+              ["${floor} >= 15", "rgb(170, 162, 204)"],
+              ["${floor} >= 10", "rgb(224, 226, 238)"],
+              ["${floor} >= 5", "rgb(252, 230, 200)"],
+              ["${floor} >= 3", "rgb(248, 176, 87)"],
+              ["${floor} >= 1", "rgb(198, 106, 11)"],
+              ["true", "rgb(127, 59, 8)"]
+            ]
+          }
+        },
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "高压线塔杆(电云)",
+        "url": "http://data.mars3d.cn/3dtiles/pnts-ganta/tileset.json",
+        "center": {"lat":30.539243,"lng":114.319134,"alt":993.6,"heading":99.2,"pitch":-19.8},
+        "maximumScreenSpaceError": 1,
+        "maximumMemoryUsage": 8192,
+        "preloadWhenHidden": true,
+        "position":{"lng":114.340369,"lat":30.536596,"alt":100},
+        "luminanceAtZenith":0.2,
+        "style": {
+          "color": {
+            "conditions": [
+              ["(${Classification} >= 4) && (${Classification} < 5) ", "color('#DC143C')"],
+              ["(${Classification} >= 7) && (${Classification} < 8)  ", "color('#7B68EE')"],
+              ["(${Classification} >= 16) && (${Classification} < 17)  ", "color('#00CED1')"],
+              ["(${Classification} >= 17) && (${Classification} < 18)  ", "color('#3CB371')"],
+              ["(${Classification} >= 18) && (${Classification} < 19)  ", "color('#FFFF00')"],
+              ["(${Classification} >= 19) && (${Classification} < 20)  ", "color('#FFA500')"],
+              ["(${Classification} >= 20) && (${Classification} < 21)  ", "color('#FF6347')"]
+            ]
+          }
+        },
+        "popup": "all",
+        "flyTo": true,
+        "enableDebugWireframe": true,
+        "show": false
+      },
+      {
+        "pid": 700,
+        "name": "树林(模型复用)",
+        "center": {"lat":40.03994,"lng":-75.613897,"alt":257.7,"heading":15.6,"pitch":-19.9},
+        "position":{"lng":-75.612903,"lat":40.042671,"alt":160},
+        "url": "./data/3dtiles/树林/tileset.json",
+        "popup": "all",
+        "flyTo": true,
+        "id": "m-0d24ff01-785c-4279-b820-b422530bfb6e",
+        "type": "3dtiles",
+        "show": false
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "台北101大厦",
+        "center": {"lat":25.029697,"lng":121.560404,"alt":872.9,"heading":49.8,"pitch":-43.5},
+        "url": "./data/3dtiles/台北101大厦/tileset.json",
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": "all",
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      { "id": 710, "pid": 70, "name": "栅格影像", "type": "group" },
+      {
+        "pid": 710,
+        "name": "武汉大学DOM",
+        "icon": "img/basemaps/esriWorldImagery.png",
+        "type": "xyz",
+        "url": "./data/image/武汉大学DOM/{z}/{x}/{y}.png",
+        "center": { "lat": 30.517563, "lng": 114.356296, "alt": 1622.7, "heading": 4.9, "pitch": -45.8 },
+        "enablePickFeatures": false,
+        "show": false,
+        "flyTo": true
+      },
+      {
+        "pid": 710,
+        "name": "仁怀市陆表碳汇监测",
+        "icon": "img/basemaps/esriWorldImagery.png",
+        "type": "xyz",
+        "tms": true,
+        "url": "./data/image/仁怀市陆表碳汇监测/{z}/{x}/{y}.png",
+        "center": { "lat": 27.478437, "lng": 106.301993, "alt": 120617.6, "heading": 10.4, "pitch": -72.3 },
+        "enablePickFeatures": false,
+        "show": false,
+        "flyTo": true
+      },
+      {
+        "pid": 710,
+        "name": "新加坡土地覆盖图",
+        "icon": "img/basemaps/esriWorldImagery.png",
+        "type": "xyz",
+        "url": "./data/image/新加坡土地覆盖图/{z}/{x}/{y}.png",
+        "center": { "lat": 1.280941, "lng": 103.831703, "alt": 141247.6, "heading": 10.6, "pitch": -89.3 },
+        "enablePickFeatures": false,
+        "show": false,
+        "flyTo": true
+      },
+      {
+        "pid": 710,
+        "name": "新加坡人口数量图",
+        "icon": "img/basemaps/esriWorldImagery.png",
+        "url": "./data/image/新加坡人口数量图/{z}/{x}/{y}.png",
+        "type": "xyz",
+        "tms": true,
+        "center": { "lat": 1.280941, "lng": 103.831703, "alt": 141247.6, "heading": 10.6, "pitch": -89.3 },
+        "enablePickFeatures": false,
+        "show": false,
+        "flyTo": true
+      },
+      { "id": 720, "pid": 70, "name": "glTF", "type": "group" },
+      {
+        "pid": 720,
+        "type": "graphic",
+        "name": "上海浦东",
+        "data": [
+          {
+            "type": "modelP",
+            "position": [121.507762, 31.233975, 200],
+            "style": {
+              "url": "//data.mars3d.cn/gltf/mars/shanghai/pudong/scene.gltf",
+              "scale": 520,
+              "heading": 215
+            }
+          }
+        ],
+        "center": { "lat": 31.251138, "lng": 121.463588, "alt": 1729.97, "heading": 110.7, "pitch": -25, "roll": 0.2 },
+        "show": false,
+        "popup": "上海浦东模型",
+        "flyTo": true
+      },
+      { "id": 730, "pid": 70, "name": "I3S", "type": "group" },
+      {
+        "pid": 730,
+        "type": "i3s",
+        "name": "法兰克福",
+        "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/Frankfurt2017_vi3s_18/SceneServer/layers/0",
+        "center": { "lat": 50.135715, "lng": 8.717535, "alt": 4284.8, "heading": 225.1, "pitch": -45.1 },
+        "skipLevelOfDetail": false,
+        "debugShowBoundingVolume": false,
+        "show": false,
+        "flyTo": true
+      },
+      {
+        "pid": 730,
+        "type": "i3s",
+        "name": "旧金山",
+        "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/SanFrancisco_3DObjects_1_7/SceneServer/layers/0",
+        "center": { "lat": 37.781745, "lng": -122.38862, "alt": 295.9, "heading": 307.2, "pitch": -17.6 },
+        "skipLevelOfDetail": false,
+        "debugShowBoundingVolume": false,
+        "show": false,
+        "flyTo": true
+      },
+      {
+        "pid": 730,
+        "type": "i3s",
+        "name": "纽约建筑白膜",
+        "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/NYC_Attributed_v17/SceneServer",
+        "geoidTiledTerrainProvider": {
+          "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/EGM2008/ImageServer"
+        },
+        "traceFetches": false,
+        "skipLevelOfDetail": false,
+        "debugShowBoundingVolume": false,
+        "center": { "lat": 40.710975, "lng": -74.023923, "alt": 768.9, "heading": 93.3, "pitch": -23.3 },
+        "popup": "all",
+        "show": false,
+        "flyTo": true
+      },
+      { "id": 740, "pid": 70, "name": "三维物理场", "type": "group" },
+      {
+        "pid": 740,
+        "name": "全球风场",
+        "type": "xyz",
+        "tms": true,
+        "url": "./data/image/全球风场/{z}/{x}/{y}.png",
+        "center": {"lat":4.508021,"lng":123.600356,"alt":16037287.1,"heading":6.9,"pitch":-89.8},
+        "enablePickFeatures": false,
+        "show": false,
+        "flyTo": true
+      }
     ]
   }
 }

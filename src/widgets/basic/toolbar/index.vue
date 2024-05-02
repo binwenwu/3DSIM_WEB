@@ -41,12 +41,12 @@ const data = [
     icon: "toolkit",
     children: [
       { name: "Data Import", icon: "upload-one", widget: "upload" },
-      { name: "Data Query", icon: "database-search", widget: "query" }
+      { name: "Data Query", icon: "database-search", widget: "query" },
+      { name: "Data Convert", icon: "switch", widget: "format-convert" }
     ]
   },
-  { name: "3DSIM图层", icon: "layers", widget: "basic-layers" },
   {
-    name: "基础工具",
+    name: "分析工具",
     icon: "tool",
     children: [
       { name: "图上量算", icon: "ruler", widget: "measure" },
@@ -56,7 +56,7 @@ const data = [
       { name: "卷帘对比", icon: "switch-contrast", widget: "map-split" }
     ]
   },
-  { name: "基础图层", icon: "layers", widget: "basic-layers" }
+  { name: "图层管理", icon: "layers", widget: "basic-layers" }
 ]
 
 const showWidget = (widget: string) => {

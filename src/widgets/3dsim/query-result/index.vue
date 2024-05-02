@@ -130,9 +130,9 @@ const columns: TableColumnType[] = [
 const rowSelection: TableProps["rowSelection"] = {
   onSelect: (selectedRow: any, selectedRows: boolean) => {
     if (selectedRows) {
-      window.globalMsg("勾选了行:" + selectedRow.feature)
+      (window as any).globalMsg("勾选了行:" + selectedRow.feature)
     } else {
-      window.globalMsg("取消了勾选行:" + selectedRow.feature)
+      (window as any).globalMsg("取消了勾选行:" + selectedRow.feature)
     }
   }
 }

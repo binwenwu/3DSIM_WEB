@@ -64,6 +64,7 @@ export default {
       addTileLayer()
     })
 
+
     const removeTileLayer = () => {
       let layer = map.getLayerById('factory-layer')
       layer && map.removeLayer(layer)

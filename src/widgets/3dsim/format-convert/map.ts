@@ -16,20 +16,20 @@ export const options: GuiItem[] = [
         label: "citygml -> 3dtiles"
       },
       {
+        value: "laz/las -> 3dtiles",
+        label: "laz/las -> 3dtiles"
+      },
+      {
         value: "geotiff -> tms tiles",
         label: "geotiff -> tms tiles"
       },
       {
-        value: "obj -> 3dtiles",
-        label: "obj -> 3dtiles"
+        value: "obj -> gltf",
+        label: "obj -> gltf"
       },
       {
-        value: "netcdf -> kml",
-        label: "netcdf -> kml"
-      },
-      {
-        value: "laz/las -> 3dtiles",
-        label: "laz/las -> 3dtiles"
+        value: "netcdf -> geotiff",
+        label: "netcdf -> geotiff"
       }
     ]
   }

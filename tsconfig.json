@@ -26,6 +26,6 @@
       "@mars/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "packages/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "packages/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/widgets/3dsim/query-result/map.js"],
   "exclude": ["node_modules", "src/**/*.js", "dist"]
 }

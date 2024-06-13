@@ -33,6 +33,11 @@ import { log } from "console"
 import { stringifyQuery } from "vue-router"
 import { useWidget } from "@mars/common/store/widget"
 import { TableColumnType, TableProps } from "ant-design-vue"
+import { PassThrough } from "stream"
+import * as mapWork from "./map.js"
+
+// 启用map.ts生命周期
+useLifecycle(mapWork)
 
 interface sceneDetailInfo {
   assetId: string
@@ -117,7 +122,8 @@ const columns: TableColumnType[] = [
     ellipsis: true,
     align: "center"
   },
-  { // 删除表格中当前行的三维资产
+  {
+    // 删除表格中当前行的三维资产
     title: "Delete",
     dataIndex: "delete",
     key: "delete",
@@ -130,9 +136,41 @@ const columns: TableColumnType[] = [
 const rowSelection: TableProps["rowSelection"] = {
   onSelect: (selectedRow: any, selectedRows: boolean) => {
     if (selectedRows) {
-      (window as any).globalMsg("勾选了行:" + selectedRow.feature)
+      switch (selectedRow.assetId) {
+        case "662ceb90bc37fb820ad714a9":
+          mapWork.addLayer1()
+          break
+        case "662ceb90bc37fb820ad714aa":
+          mapWork.addLayer2()
+          break
+        case "662cf578bc37fb820ad714bb":
+          mapWork.addLayer3()
+          break
+        case "662cf578bc37fb820ad714bc":
+          mapWork.addLayer4()
+          break
+        case "662cf57abc37fb820ad714cd":
+          mapWork.addLayer5()
+          break
+      }
     } else {
-      (window as any).globalMsg("取消了勾选行:" + selectedRow.feature)
+      switch (selectedRow.assetId) {
+        case "662ceb90bc37fb820ad714a9":
+          mapWork.removeLayer1()
+          break
+        case "662ceb90bc37fb820ad714aa":
+          mapWork.removeLayer2()
+          break
+        case "662cf578bc37fb820ad714bb":
+          mapWork.removeLayer3()
+          break
+        case "662cf578bc37fb820ad714bc":
+          mapWork.removeLayer4()
+          break
+        case "662cf57abc37fb820ad714cd":
+          mapWork.removeLayer5()
+          break
+      }
     }
   }
 }
@@ -182,7 +220,6 @@ const deleteAsset = (record: modelDetailInfo | sceneDetailInfo) => {
     assetsList.value.splice(index, 1)
   }
   // 3. 发送请求到后端删除该资产
-  
 }
 
 const sortByAlphabeticalOrder = (a, b, field: string) => {

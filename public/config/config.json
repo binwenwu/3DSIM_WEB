@@ -405,6 +405,151 @@
       {
         "pid": 700,
         "type": "3dtiles",
+        "name": "武汉大学建筑模型1",
+        "url": "./data/3dtiles/武汉大学建筑模型/part1.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": false,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学建筑模型2",
+        "url": "./data/3dtiles/武汉大学建筑模型/part2.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": false,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学建筑模型3",
+        "url": "./data/3dtiles/武汉大学建筑模型/part3.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": false,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学建筑模型4",
+        "url": "./data/3dtiles/武汉大学建筑模型/part4.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": false,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "武汉大学建筑模型5",
+        "url": "./data/3dtiles/武汉大学建筑模型/part5.json",
+        "center": {"lat":30.512594,"lng":114.355158,"alt":2303.4,"heading":4.9,"pitch":-45.8},
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": true,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": false,
+        "popup": [
+          { "name": "编号", "field": "id", "unit": "" },
+          { "name": "名称", "field": "layer_name", "unit": "" }
+        ],
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
         "name": "上海市建筑模型",
         "url": "https://data.mars3d.cn/3dtiles/jzw-shanghai/tileset.json",
         "center": { "lat": 31.243628, "lng": 121.478968, "alt": 998.3, "heading": 104.7, "pitch": -28.6 },
@@ -504,6 +649,32 @@
         "preferLeaves": true,
         "preloadWhenHidden": true,
         "skipLevelOfDetail": true,
+        "show": false,
+        "flyTo": true,
+        "popup": "all",
+        "highlight": {
+          "type": "click",
+          "color": "#FFFF00",
+          "outlineEffect": true
+        }
+      },
+      {
+        "pid": 700,
+        "type": "3dtiles",
+        "name": "澳门",
+        "center": {"lat":22.179329,"lng":113.541303,"alt":701.4,"heading":20.1,"pitch":-28.5},
+        "url": "./data/3dtiles/澳门/tileset.json",
+        "maximumScreenSpaceError": 16,
+        "maximumMemoryUsage": 4096,
+        "progressiveResolutionHeightFraction": 0.5,
+        "loadSiblings": true,
+        "cullRequestsWhileMoving": true,
+        "cullRequestsWhileMovingMultiplier": 10,
+        "dynamicScreenSpaceError": true,
+        "cullWithChildrenBounds": true,
+        "preferLeaves": false,
+        "preloadWhenHidden": true,
+        "skipLevelOfDetail": false,
         "show": false,
         "flyTo": true,
         "popup": "all",

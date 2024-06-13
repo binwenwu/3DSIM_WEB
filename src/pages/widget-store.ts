@@ -133,7 +133,7 @@ const store: StoreOptions<WidgetState> = {
         name: "format-convert"
       }
     ],
-    openAtStart: ["query-poi", "toolbar", "basic-layers"]
+    openAtStart: ["query-poi", "toolbar"]
   }
 }
 

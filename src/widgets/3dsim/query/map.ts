@@ -140,7 +140,7 @@ export const options: GuiItem[] = [
     type: "radio",
     field: "assetType",
     label: "Asset",
-    value: "3DScene",
+    value: "All",
     data: [
       {
         value: "All",

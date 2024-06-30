@@ -1,4 +1,6 @@
-root = true #表示是最顶层的配置文件，发现设为true时，才会停止查找.editorconfig文件
+
+#表示是最顶层的配置文件，发现设为true时，才会停止查找.editorconfig文件
+root = true
 
 # 匹配全部文件
 [*]

@@ -18,7 +18,7 @@ export default ({ mode }: ConfigEnv) => {
   return defineConfig({
     base: ENV.VITE_BASE_URL,
     server: {
-      host: "127.0.0.1",
+      host: "0.0.0.0", // 允许局域网内所有设备访问
       port: 3003
     },
     define: {

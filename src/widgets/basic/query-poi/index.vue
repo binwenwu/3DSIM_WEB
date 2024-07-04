@@ -3,7 +3,7 @@
     <div class="query-poi" @mousedown="clickVoid">
       <div class="query-poi__search">
         <mars-input
-          placeholder="地点搜索"
+          placeholder="Location Search"
           v-model:value="searchTxt"
           class="input"
           data-event="prevent"
@@ -39,7 +39,7 @@
             </li>
           </ul>
           <div class="query-site__page">
-            <p class="query-site-allcount">共{{ allCount }}条结果</p>
+            <p class="query-site-allcount">{{ allCount }} results in total</p>
             <a-pagination @change="(page: number) => querySiteList(searchTxt, page)" size="small" :total="allCount" pageSize="6" :simple="true" />
           </div>
         </template>

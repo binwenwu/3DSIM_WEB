@@ -37,7 +37,7 @@ const { activate } = useWidget()
 const data = [
   // { name: "底图", icon: "international", widget: "manage-basemap" },
   {
-    name: "3DSIM工具",
+    name: "3DSIM Tools",
     icon: "toolkit",
     children: [
       { name: "Data Import", icon: "upload-one", widget: "upload" },
@@ -46,17 +46,17 @@ const data = [
     ]
   },
   {
-    name: "分析工具",
+    name: "Analysis Tools",
     icon: "tool",
     children: [
-      { name: "图上量算", icon: "ruler", widget: "measure" },
-      { name: "空间分析", icon: "analysis", widget: "analysis" },
-      { name: "坐标定位", icon: "local", widget: "location-point" },
-      { name: "图上标绘", icon: "hand-painted-plate", widget: "plot" },
-      { name: "卷帘对比", icon: "switch-contrast", widget: "map-split" }
+      { name: "Measurement on the graph", icon: "ruler", widget: "measure" },
+      { name: "spatial analysis ", icon: "analysis", widget: "analysis" },
+      { name: "Coordinate positioning", icon: "local", widget: "location-point" },
+      { name: "Plot on the diagram", icon: "hand-painted-plate", widget: "plot" },
+      { name: "Comparison of roller blinds", icon: "switch-contrast", widget: "map-split" }
     ]
   },
-  { name: "图层管理", icon: "layers", widget: "basic-layers" }
+  { name: "Layer Manage", icon: "layers", widget: "basic-layers" }
 ]
 
 const showWidget = (widget: string) => {

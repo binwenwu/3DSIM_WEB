@@ -32,31 +32,35 @@
  */
 import { useWidget } from "@mars/common/store/widget"
 
+import { useI18n } from "vue-i18n"
+const { t } = useI18n()
+
+
 const { activate } = useWidget()
 
 const data = [
   // { name: "底图", icon: "international", widget: "manage-basemap" },
   {
-    name: "3DSIM Tools",
+    name: t("3dsim_tools"),
     icon: "toolkit",
     children: [
-      { name: "Data Import", icon: "upload-one", widget: "upload" },
-      { name: "Data Query", icon: "database-search", widget: "query" },
-      { name: "Data Convert", icon: "switch", widget: "format-convert" }
+      { name: t("data_import"), icon: "upload-one", widget: "upload" },
+      { name: t("data_query"), icon: "database-search", widget: "query" },
+      { name: t("data_convert"), icon: "switch", widget: "format-convert" }
     ]
   },
   {
-    name: "Analysis Tools",
+    name: t("analysis_tools"),
     icon: "tool",
     children: [
-      { name: "Measurement on the graph", icon: "ruler", widget: "measure" },
-      { name: "spatial analysis ", icon: "analysis", widget: "analysis" },
-      { name: "Coordinate positioning", icon: "local", widget: "location-point" },
-      { name: "Plot on the diagram", icon: "hand-painted-plate", widget: "plot" },
-      { name: "Comparison of roller blinds", icon: "switch-contrast", widget: "map-split" }
+      { name: t("measure_on_the_graph"), icon: "ruler", widget: "measure" },
+      { name: t("spatial_analysis"), icon: "analysis", widget: "analysis" },
+      { name: t("coordinate_positioning"), icon: "local", widget: "location-point" },
+      { name: t("plot_on_the_diagram"), icon: "hand-painted-plate", widget: "plot" },
+      { name: t("comparison_of_roller_blinds"), icon: "switch-contrast", widget: "map-split" }
     ]
   },
-  { name: "Layer Manage", icon: "layers", widget: "basic-layers" }
+  { name: t("layer_manage"), icon: "layers", widget: "basic-layers" }
 ]
 
 const showWidget = (widget: string) => {
@@ -77,6 +81,7 @@ const clickMenu = ({ key }: any) => {
   border-radius: 2px !important;
   background-color: var(--mars-bg-base);
   height: 40px;
+
   .toolbar-item {
     display: inline-block;
     padding: 6px 12px;
@@ -84,10 +89,12 @@ const clickMenu = ({ key }: any) => {
     color: var(--mars-text-color);
     font-size: 15px;
     cursor: pointer;
+
     &:hover {
       background-color: var(--mars-select-bg);
     }
   }
+
   .mars-icon {
     margin-right: 5px;
     color: var(--mars-text-color);

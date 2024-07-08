@@ -1,5 +1,5 @@
 <template>
-  <mars-dialog title="淹没分析" :visible="true" right="10" top="85" width="300">
+  <mars-dialog title="Inundation analysis" :visible="true" right="10" top="85" width="300">
     <!-- 返回 -->
     <el-button :icon="Back" size="small" @click="comeBack" circle />
     <!-- 下划线 -->
@@ -45,7 +45,7 @@
     <div v-show="isShow">
       <div class="f-mb">
         <a-space>
-          <span>高度选择</span>
+          <span>Height selection</span>
           <a-slider
             tooltipPlacement="bottom"
             v-model:value="formState.height"
@@ -59,7 +59,7 @@
 
       <div class="f-mb">
         <a-space>
-          <span>当前高度</span>
+          <span>Current height</span>
           <span>{{ formState.height }}</span>
         </a-space>
       </div>

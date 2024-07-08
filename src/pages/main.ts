@@ -17,8 +17,21 @@ import MarsUI from "@mars/components/mars-ui"
 import { router } from "./routes"
 import "@mars/components/mars-ui/common"
 
+import { createI18n } from "vue-i18n"
+import enLocale from "@mars/locales/en.json"
+import zhLocale from "@mars/locales/zh.json"
+
+const i18n = createI18n({
+  legacy: false, // 使用组合 API
+  locale: "en", // 默认语言为英语
+  messages: {
+    en: enLocale,
+    zh: zhLocale
+  }
+})
 
 const app = createApp(Application)
+app.use(i18n)
 app.use(MarsUI)
 app.use(router)
 app.use(injectState(store), key)
@@ -26,5 +39,3 @@ app.use(testStore, testKey)
 app.use(TinyVue) // 一套跨端、跨框架的企业级 UI 组件库，支持 Vue 2 和 Vue 3，支持 PC 端和移动端
 app.use(ElementPlus) // 一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库
 app.mount("#app")
-
-

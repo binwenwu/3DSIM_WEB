@@ -769,7 +769,7 @@
         "type": "i3s",
         "name": "旧金山",
         "url": "https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/SanFrancisco_3DObjects_1_7/SceneServer/layers/0",
-        "center": { "lat": 37.781745, "lng": -122.38862, "alt": 295.9, "heading": 307.2, "pitch": -17.6 },
+        "center": {"lat":37.784209,"lng":-122.409215,"alt":583.3,"heading":53.1,"pitch":-26.2},
         "skipLevelOfDetail": false,
         "debugShowBoundingVolume": false,
         "show": false,

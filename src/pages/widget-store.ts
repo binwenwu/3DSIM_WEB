@@ -72,7 +72,7 @@ const store: StoreOptions<WidgetState> = {
       },
       { // 地形开挖
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/analysis/dig-analysis/index.vue"))),
-        name: "dig-analysis" 
+        name: "dig-analysis"
       },
       { // 地表透明
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/basic/analysis/surface-transparency/index.vue"))),
@@ -131,6 +131,10 @@ const store: StoreOptions<WidgetState> = {
       { // 数据格式转化
         component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/format-convert/index.vue"))),
         name: "format-convert"
+      },
+      { // 数据格式转化
+        component: markRaw(defineAsyncComponent(() => import("@mars/widgets/3dsim/test/index.vue"))),
+        name: "test"
       }
     ],
     openAtStart: ["query-poi", "toolbar"]

@@ -45,7 +45,7 @@
     <div v-show="isShow">
       <div class="f-mb">
         <a-space>
-          <span>Height selection</span>
+          <span>高度选择</span>
           <a-slider
             tooltipPlacement="bottom"
             v-model:value="formState.height"
@@ -59,7 +59,7 @@
 
       <div class="f-mb">
         <a-space>
-          <span>Current height</span>
+          <span>现在高度</span>
           <span>{{ formState.height }}</span>
         </a-space>
       </div>

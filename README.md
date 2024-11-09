@@ -1,6 +1,6 @@
 ## Introduction
 
-`3DSIM WEB` is a 3D webgis prototype system built based on the self-designed **"3DSIM conceptual model"**. It is developed using mainstream technologies such as `Vue3`, `Vite5`, and `TypeScript`, and can be used for learning and reference. The core code for `3DSIM` design still needs to be optimized and is awaiting open source.
+`3DSIM WEB` is a 3D webgis prototype system built based on the self-designed **"3DSIM conceptual model"**. It is developed using mainstream technologies such as `Vue3`, `Vite5`, and `TypeScript`, and can be used for learning and reference. The core code of `3DSIM` design has also been officially open sourced: https://github.com/binwenwu/3DSIM
 
 ## Features
 
